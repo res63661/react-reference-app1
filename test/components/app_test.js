@@ -11,4 +11,21 @@ describe('App' , () => {
   it('renders something', () => {
     expect(component).to.exist;
   });
+
+  
+});
+
+
+describe('Devices Reducer' , () => {
+  let component;
+
+  beforeEach(() => {
+    component = renderComponent(App);
+  });
+
+  it('Can get devices', () => {
+    expect(component).to.exist;
+  });
+
+  
 });

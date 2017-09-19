@@ -1,5 +1,6 @@
 module.exports = {
   entry: [
+    
     './src/index.js'
   ],
   output: {
@@ -21,6 +22,7 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: './'
+    contentBase: './',
+    port: 8081
   }
 };
