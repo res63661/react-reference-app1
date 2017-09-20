@@ -16,25 +16,43 @@ class Grid extends Component {
     createDeviceRow(device) {
         return (
 
-            <div className="card card-block" key={device.title}>
-                <h4 className="card-title">{device.title}</h4>
-                <p className="card-text">{device.body}</p>
-            </div>
+            <tr key={device._id}>
+                <th>{device.deviceName}</th>
+                <th>{device.deviceType}</th>
+                <th>{device.description}</th>
+                <th>{device.isHub ? "Yes" : "No"}</th>
+            </tr>
+
         )
     }
 
-    buildHeaderRow(){
-        return(<div>no data</div>)
+    buildHeaderRow() {
+        return (
+            <tr >
+                <td>Name</td>
+                <td>Type</td>
+                <td>Description</td>
+                <td>Hub</td>
+            </tr>
+        )
     }
 
     render() {
         if (this.props.devices) {
             return (
-                <div>{this.props.devices.map(this.createDeviceRow)}</div>
+
+                <table>
+                    <thead>
+                        {this.buildHeaderRow()}
+                    </thead>
+                    <tbody>
+                        {this.props.devices.map(this.createDeviceRow)}
+                    </tbody>
+                </table>
             )
         }
         else {
-            return(this.buildHeaderRow())
+            return (this.buildHeaderRow())
         }
     }
 }
