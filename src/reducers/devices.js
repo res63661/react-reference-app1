@@ -1,14 +1,13 @@
 import * as actions from '../actions/types';
 
-export default function(state, action){
-    debugger;
+export default function(state=[], action){
     switch(action.type)
-    {
-        
-        case actions.RECEIVE_DEVICES:
-            return Object.assign({}, state, state.devices);
-
+    {        
+        case actions.REQUEST_DEVICES:
+            //Object.assign({}, ...state, action.payload)            
+            console.log(action.payload);
+            return [...state, ...action.payload];            
     }
 
-    return Object.assign({}, state, null);
+    return state;
 }

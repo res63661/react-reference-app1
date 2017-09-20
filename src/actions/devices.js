@@ -4,7 +4,10 @@ import axios from 'axios';
 export function requestDevices()
 {
     console.log('requesting devices...');
-    return getDevices();
+    return {
+        type: ReducerTypes.REQUEST_DEVICES,
+        payload: getDevices()
+    };
 }
 
 export function receiveDevices(devices)
@@ -17,17 +20,18 @@ export function receiveDevices(devices)
 
 function getDevices()
 {
+  
     
     console.log('getting devices');
-    axios.get('http://localhost:8080/device')
+    return axios.get('http://localhost:8080/device')
     // .then((res)=>res.json())
     // .then((res)=>console.log(res))
     // .then(receiveDevices(res));
 
-    .then((response)=>{
-        console.log(response.data); // ex.: { user: 'Your User'}
-        console.log(response.status); // ex.: 200
-      });
+    // . // ex.: { user: 'Your User'}
+    //     console.log(response.status); // ex.: 200
+    //     receiveDevices(response.data);
+    //   })
     ////TODO: handle err.
 
 }

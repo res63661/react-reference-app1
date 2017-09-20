@@ -8,7 +8,7 @@ export default function ({ dispatch }) {
             return next(action);
         }
 
-        //console.log('Promise', action);
+        console.log('Promise', action);
 
         //Make sure action's promise respolves
         action.payload.then(function(response){
