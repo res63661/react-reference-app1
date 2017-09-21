@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions/devices';
+import RaisedButton from 'material-ui/RaisedButton';
 
 class Grid extends Component {
     componentWillMount() {
@@ -17,10 +18,11 @@ class Grid extends Component {
         return (
 
             <tr key={device._id}>
-                <th>{device.deviceName}</th>
-                <th>{device.deviceType}</th>
-                <th>{device.description}</th>
-                <th>{device.isHub ? "Yes" : "No"}</th>
+                <td>{device.deviceName}</td>
+                <td>{device.deviceType}</td>
+                <td>{device.description}</td>
+                <td>{device.isHub ? "Yes" : "No"}</td>
+                <td> <RaisedButton label="Default" /></td>
             </tr>
 
         )
