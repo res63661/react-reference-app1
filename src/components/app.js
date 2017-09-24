@@ -2,20 +2,20 @@ import React, { Component } from 'react';
 import UserList from './user_list'
 import Grid from './grid';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import {CanvasChart} from './d3/details-use-chart';
+import { CanvasChart } from './d3/details-use-chart';
 
 export default class App extends Component {
   render() {
     return (
       <MuiThemeProvider>
-      <div>
         <div>
-          <Grid />
+          <div>
+            <Grid/>
+          </div>
+          <div>
+            <CanvasChart width={960} height={500} data={data} />
+          </div>
         </div>
-        <div>
-          <CanvasChart width={960} height={500} data={data} />
-        </div>
-      </div>
       </MuiThemeProvider>
     );
   }

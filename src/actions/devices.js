@@ -20,12 +20,11 @@ export function receiveDevices(devices)
 
 function getDevices()
 {
-  
     
     console.log('getting devices');
     return axios.get('http://localhost:8080/device')
-    // .then((res)=>res.json())
-    // .then((res)=>console.log(res))
+     //.then((res)=>res.json())
+//     .then((res)=>console.log(res))
     // .then(receiveDevices(res));
 
     // . // ex.: { user: 'Your User'}
