@@ -1,4 +1,6 @@
-# ReduxSimpleStarter
+#Adapted from StephenGrider # ReduxSimpleStarter
+
+#Added material-ui, middleware, some d3
 
 Interested in learning [Redux](https://www.udemy.com/react-redux/)?
 
